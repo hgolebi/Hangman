@@ -1,0 +1,100 @@
+body
+{
+    background-color: #a79cda;
+    color: khaki;
+    font-size: 28px;
+    font-family: 'Chivo Mono', monospace;
+}
+
+#main
+{
+    width:1006px;
+    margin-top: 170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#phrase
+{
+    background-color: rgb(241, 235, 179);
+    color: #827ba5;
+    border: 3px solid #827ba5;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 48px;
+    min-height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#hangman
+{
+    float: left;
+    width: 450px;
+    text-align: center;
+    min-height: 450px;
+    background-color: rgb(241, 234, 171);
+    border: 3px solid #827ba5;
+}
+
+#letters
+{
+    float: left;
+    width: 450px;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+#end_letters
+{
+    float: left;
+    width: 440px;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 100px;
+    background-color: #9891bb;
+    border: 5px solid rgb(241, 234, 163);
+
+}
+
+.unknown_letter
+{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    display: inline;
+}
+
+.letter
+{
+    background-color: #827ba5;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid khaki;
+    float: left;
+    cursor: pointer;
+}
+
+.letter:hover
+{
+    border: rgb(175, 169, 117) 3px solid;
+    color: rgb(175, 169, 117);
+}
+
+.big_message
+{
+    margin-top: 10px;
+    font-size: 60px;
+}
+
+.small_message
+{
+    margin-bottom: 10px;
+    font-size: 40px;
+}
