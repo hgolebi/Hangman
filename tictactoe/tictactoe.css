@@ -1,0 +1,31 @@
+@font-face
+{
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+body
+{
+    background-color: #44bcc5;
+    color: khaki;
+    font-size: 28px;
+    font-family: 'Chivo Mono', monospace;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main
+{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#header
+{
+    font-size: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Rocher;
+}
