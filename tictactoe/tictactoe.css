@@ -7,7 +7,7 @@
 body
 {
     background-color: #44bcc5;
-    color: khaki;
+    color: rgb(16, 34, 138);
     font-size: 28px;
     font-family: 'Chivo Mono', monospace;
     margin-left: auto;
@@ -25,7 +25,22 @@ body
 #header
 {
     font-size: 70px;
+    font-family: Rocher;
+}
+
+#board
+{
+    width: 900px;
+    background-color: bisque;
+    display: grid;
+    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: repeat(3, 300px);
     margin-left: auto;
     margin-right: auto;
-    font-family: Rocher;
+    text-align: left;
+}
+
+.box
+{
+    color: brown;
 }
