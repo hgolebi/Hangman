@@ -6,8 +6,7 @@
 
 body
 {
-    background-color: #44bcc5;
-    color: rgb(16, 34, 138);
+    background-color: bisque;
     font-size: 28px;
     font-family: 'Chivo Mono', monospace;
     margin-left: auto;
@@ -16,7 +15,7 @@ body
 
 #main
 {
-    width: 1000px;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -33,20 +32,49 @@ body
 #board
 {
     width: fit-content;
-    background-color: bisque;
     display: grid;
-    grid-template-rows: repeat(3, 230px);
-    grid-template-columns: repeat(3, 230px);
+    grid-template-rows: repeat(3, 180px);
+    grid-template-columns: repeat(3, 180px);
     margin-left: auto;
     margin-right: auto;
-}
+    clip-path: inset(10px);
+}   
 
 .box
 {
-    color: brown;
+    color: rgb(218, 150, 24);
     display: flex;
     justify-content: center;
+    content-visibility: hidden;
     flex-direction: column;
     font-size: 100px;
-    border: 3px brown solid;
+    border: 10px rgba(88, 65, 47, 0.925) solid;
+}
+
+.box:hover {
+    content-visibility: visible;
+}
+
+.boxClicked
+{
+    color: rgb(218, 150, 24);
+    display: flex;
+    justify-content: center;
+    content-visibility: visible;
+    flex-direction: column;
+    font-size: 100px;
+    border: 10px rgba(88, 65, 47, 0.925) solid;
+}
+
+#end_message
+{
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    opacity: 70%;
+    position: fixed;
+    top: 220px;
+    visibility: hidden;
+    
 }
