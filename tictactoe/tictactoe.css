@@ -70,11 +70,9 @@ body
 {
     text-align: center;
     width: 100%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.73);
     color: white;
-    opacity: 70%;
     position: fixed;
     top: 220px;
     visibility: hidden;
-    
 }
