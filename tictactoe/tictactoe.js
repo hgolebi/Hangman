@@ -42,7 +42,13 @@ function initBoard() {
 
 }
 
-function resetBoard() {
+function resetGame() {
+    $('#end_message').css('display', 'none');
+    $('.box').css('pointer-events', 'auto');
+    $('.boxClicked').css('pointer-events', 'auto');
+    document.body.removeEventListener('click', resetGame);
+
+    resetState();
     $('.boxClicked').addClass('box');
     $('.boxClicked').click(boxClicked);
     $('.boxClicked').removeClass('boxClicked');
@@ -52,7 +58,11 @@ function resetBoard() {
 
 function endMessage() {
     header = document.createElement('h1');
-    message = document.createElement('p');
+    header.id = 'header';
+    message = document.createElement('h3');
+    message.id = 'message';
+    retry_mess = document.createElement('h6');
+    retry_mess.id = 'retry_mess';
 
     if (isXTurn) {
         header.innerHTML = 'Gratulacje!';
@@ -62,16 +72,21 @@ function endMessage() {
         header.innerHTML = 'Porażka!';
         message.innerHTML = 'Niestety, nie udało ci się pokonać przeciwnika';
     }
-
+    retry_mess.innerHTML = 'Kliknij aby zagrać ponownie';
     $('#end_message').append(header);
     $('#end_message').append(message);
-    $('#end_message').css('visibility', 'visible');
+    $('#end_message').append(retry_mess);
+    // $('#end_message').css('visibility', 'visible');
+    $('#end_message').css('display', 'list-item');
+    setTimeout(function() {
+        document.body.addEventListener('click', resetGame);
+    }, 1000);
 }
 
 function gameFinished() {
+    $('.box').css('pointer-events', 'none');
+    $('.boxClicked').css('pointer-events', 'none');
     endMessage();
-    resetBoard();
-    resetState();
 }
 
 function calculateWin(elem) {

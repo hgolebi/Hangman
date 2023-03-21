@@ -21,7 +21,7 @@ body
     text-align: center;
 }
 
-#header
+#title
 {
     font-size: 70px;
     font-family: Rocher;
@@ -66,6 +66,15 @@ body
     border: 10px rgba(88, 65, 47, 0.925) solid;
 }
 
+@keyframes slide_in {
+    from {
+        transform: translateY(+300px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 #end_message
 {
     text-align: center;
@@ -74,5 +83,26 @@ body
     color: white;
     position: fixed;
     top: 220px;
-    visibility: hidden;
+    display: none;
+    animation: slide_in 0.5s ease;
+    
+
+}
+
+#header
+{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#message
+{
+    margin-top: 10px;
+}
+
+#retry_mess
+{
+    margin-bottom: 30px;
+    font-style: italic;
+    font-size: 16px;
 }
