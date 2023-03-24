@@ -44,6 +44,7 @@ function initBoard() {
 
 function resetGame() {
     $('#end_message').css('display', 'none');
+    $('#end_message').empty();
     $('.box').css('pointer-events', 'auto');
     $('.boxClicked').css('pointer-events', 'auto');
     document.body.removeEventListener('click', resetGame);
